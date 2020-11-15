@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NearShop</string>
+    <string name="name_text">Nom Du Magasin A Changer</string>
+    <string name="distance_text">50m</string>
+</resources>
