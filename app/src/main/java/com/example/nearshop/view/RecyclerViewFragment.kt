@@ -107,13 +107,25 @@ class RecyclerViewFragment : Fragment() {
      * from a local content provider or remote server.
      */
     private fun initDataset() {
-        dataset = Array(DATASET_COUNT, { i -> "This is element # $i"})
+        val name = arrayOf(
+            "BioAuvergne",
+            "Naturalia",
+            "L'eauVive",
+            "Le Panier Bio",
+            "La Fabrique de Marie",
+            "L'épicerie du Monde",
+            "Grand Panier Bio",
+            "Histoire de Graine",
+            "Galaxy Diet",
+            "Arbre de Vie"
+        )
+        dataset = Array(DATASET_COUNT, { i -> name[i]})
     }
 
     companion object {
         private val TAG = "RecyclerViewFragment"
         private val KEY_LAYOUT_MANAGER = "layoutManager"
         private val SPAN_COUNT = 2
-        private val DATASET_COUNT = 60
+        private val DATASET_COUNT = 10
     }
 }
