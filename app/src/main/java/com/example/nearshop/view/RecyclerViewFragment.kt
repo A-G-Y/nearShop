@@ -18,7 +18,7 @@ class RecyclerViewFragment : Fragment() {
     private lateinit var layoutManager: RecyclerView.LayoutManager
     private lateinit var dataset: Array<String>
     private lateinit var dataDist: Array<String>
-    private lateinit var dataImage: Array<String>
+    /*private lateinit var dataImage: Array<String>*/
 
     enum class LayoutManagerType { GRID_LAYOUT_MANAGER, LINEAR_LAYOUT_MANAGER }
 
@@ -149,7 +149,7 @@ class RecyclerViewFragment : Fragment() {
         )
         dataset = Array(DATASET_COUNT, { i -> name[i] })
         dataDist = Array(DATASET_COUNT, { i -> distance[i] })
-        dataImage = Array(DATASET_COUNT, { i -> image[i] })
+        /*dataImage = Array(DATASET_COUNT, { i -> image[i] })*/
 
     }
 
