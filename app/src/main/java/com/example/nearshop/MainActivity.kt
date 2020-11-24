@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import com.example.nearshop.view.RecyclerViewFragment
+import com.google.android.libraries.places.api.Places
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +13,26 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Initialize the SDK
+        Places.initialize(applicationContext, "YourApiKey")
+
+        // Create a new PlacesClient instance
+        val placesClient = Places.createClient(this)
+
+        /*
+        Didn't work because billing not initialize for this API
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl( "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=mongolian %20grill&inputtype=textquery&fields=photos,formatted_address,name,opening_ hours,rating&locationbias=circle:2000@47.6918452,-122.2226413&key=YourApiKey")
+            .addConverterFactory(MoshiConverterFactory.create())
+            .build()
+
+        println(retrofit)
+
+         */
+
+
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
