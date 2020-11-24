@@ -1,15 +1,15 @@
-
 package com.example.nearshop.view
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.nearshop.R
-class CustomAdapter(private val dataSet: Array<String>) :
+
+class CustomAdapter(private val dataSet: Array<String>, private val dataDist: Array<String>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     /**
@@ -17,11 +17,13 @@ class CustomAdapter(private val dataSet: Array<String>) :
      */
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         val textView: TextView
+        val distanceView: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
             v.setOnClickListener { Log.d(TAG, "Element $adapterPosition clicked.") }
-            textView = v.findViewById(R.id.textview)
+            textView = v.findViewById(R.id.shopName)
+            distanceView = v.findViewById(R.id.Distance)
         }
     }
 
@@ -41,6 +43,8 @@ class CustomAdapter(private val dataSet: Array<String>) :
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
         viewHolder.textView.text = dataSet[position]
+        viewHolder.distanceView.text = dataDist[position]
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
