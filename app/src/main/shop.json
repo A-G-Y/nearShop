@@ -1,0 +1,69 @@
+{
+   "html_attributions" : [],
+   "result" : {
+		"Shop" : [
+			{
+			  "shopName":"BioAuvergne",
+			  "distance":"55 m",
+			  "img":"@drawable/a1",
+			  "link":"https://www.google.com/maps/place/Bio+Auvergne+II/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71bfe659414a7:0x8365a3880261dbf7!8m2!3d45.7841667!4d3.1013889"
+		   },
+		   {
+			  "shopName":"Naturalia",
+			  "distance":"600 m",
+			  "img":"@drawable/a2",
+			  "link":"https://www.google.com/maps/place/NATURALIA/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71bc2cab637a1:0xbd946d0346eea1a1!8m2!3d45.7770681!4d3.0829733"
+		   },
+		   {
+			  "shopName":"L'eau Vive",
+			  "distance":"1000 m",
+			  "img":"@drawable/a3",
+			  "link":"https://www.google.com/maps/place/L'eau+Vive/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71bdc15f5f5eb:0xb6e20bef0c43b9fb!8m2!3d45.7807197!4d3.0808835"
+		   },
+		   {
+			  "shopName":"Le Panier Bio",
+			  "distance":"2000 m",
+			  "img":"@drawable/a4",
+			  "link":"https://www.google.com/maps/place/Le+Panier+Bio/@45.7679901,3.0736809,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71bc00de2f141:0xf41930cfd932f719!8m2!3d45.7679901!4d3.0824356"
+		   },
+		   {
+			  "shopName":"La Fabrique de Marie",
+			  "distance":"5000 m",
+			  "img":"@drawable/a5",
+			  "link":"https://www.google.com/maps/place/La+fabrique+de+Marie+-+Produits+bio+vrac+et+massages,+37+Rue+Fontgieve,+63000+Clermont-Ferrand/@45.7767233,3.0858258,15z/data=!4m5!1m2!2m1!1smagasin+bio!3m1!1s0x47f71bdbed57c3e5:0xe6b94680c7c92826"
+		   },
+		   {
+			  "shopName":"L'épicerie du Monde",
+			  "distance":"200 m",
+			  "img":"@drawable/a6",
+			  "link":"https://www.google.com/maps/place/L%E2%80%99%C3%89PICERIE+DU+MONDE/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71b0f7fdb1a03:0xb8b05dfcc8b72732!8m2!3d45.7735968!4d3.0802473"
+		   },
+		   {
+			  "shopName":"Grand Panier Bio",
+			  "distance":"9000 m",
+			  "img":"@drawable/a7",
+			  "link":"https://www.google.com/maps/place/Le+Grand+Panier+Bio/@45.7801421,3.1166324,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71c2c12547bb1:0x489d65329811c106!8m2!3d45.7801421!4d3.1253871"
+		   },
+		   {
+			  "shopName":"Histoire de Graine",
+			  "distance":"6000 m",
+			  "img":"@drawable/a8",
+			  "link":"https://www.google.com/maps/place/HISTOIRE+DE+GRAINES+Clermont-Ferrand/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71b33854fb939:0x542140ac7ceb6a2c!8m2!3d45.7748247!4d3.0952031"
+		   },
+		   {
+			  "shopName":"Galaxy Diet",
+			  "distance":"100 m",
+			  "img":"@drawable/a9",
+			  "link":"https://www.google.com/maps/place/Galaxy+Diet/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71be0f63466c5:0x6e95f0100e2c7235!8m2!3d45.7839268!4d3.0867255"
+		   },
+		   {
+			  "shopName":"Arbre de Vie",
+			  "distance":"100 m",
+			  "img":"@drawable/a10",
+			  "link":"https://www.google.com/maps/place/Arbre+de+Vie/@45.7767233,3.0858258,15z/data=!4m8!1m2!2m1!1smagasin+bio!3m4!1s0x47f71bcd92124e85:0x37549f479b0afbb5!8m2!3d45.776701!4d3.0674231"
+		   }
+		]
+   },
+   "status" : "OK"
+}
+      

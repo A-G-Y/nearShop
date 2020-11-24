@@ -10,12 +10,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nearshop.R
 
+
 class RecyclerViewFragment : Fragment() {
 
     private lateinit var currentLayoutManagerType: LayoutManagerType
     private lateinit var recyclerView: RecyclerView
     private lateinit var layoutManager: RecyclerView.LayoutManager
     private lateinit var dataset: Array<String>
+    private lateinit var dataDist: Array<String>
+    private lateinit var dataImage: Array<String>
 
     enum class LayoutManagerType { GRID_LAYOUT_MANAGER, LINEAR_LAYOUT_MANAGER }
 
@@ -27,16 +30,21 @@ class RecyclerViewFragment : Fragment() {
         initDataset()
     }
 
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val rootView = inflater.inflate(
             R.layout.recycler_view_frag,
-                container, false).apply { tag =
-            TAG
+            container, false
+        ).apply {
+            tag =
+                TAG
         }
 
         recyclerView = rootView.findViewById(R.id.recyclerView)
+
 
         // LinearLayoutManager is used here, this will layout the elements in a similar fashion
         // to the way ListView would layout elements. The RecyclerView.LayoutManager defines how
@@ -49,33 +57,29 @@ class RecyclerViewFragment : Fragment() {
         if (savedInstanceState != null) {
             // Restore saved layout manager type.
             currentLayoutManagerType = savedInstanceState
-                    .getSerializable(KEY_LAYOUT_MANAGER) as LayoutManagerType
+                .getSerializable(KEY_LAYOUT_MANAGER) as LayoutManagerType
         }
         setRecyclerViewLayoutManager(currentLayoutManagerType)
 
-        // Set CustomAdapter as the adapter for RecyclerView.
-        recyclerView.adapter = CustomAdapter(dataset)
+        recyclerView.adapter = CustomAdapter(dataset, dataDist)
+
 
         return rootView
     }
 
-    /**
-     * Set RecyclerView's LayoutManager to the one given.
-     *
-     * @param layoutManagerType Type of layout manager to switch to.
-     */
     private fun setRecyclerViewLayoutManager(layoutManagerType: LayoutManagerType) {
         var scrollPosition = 0
 
         // If a layout manager has already been set, get current scroll position.
         if (recyclerView.layoutManager != null) {
             scrollPosition = (recyclerView.layoutManager as LinearLayoutManager)
-                    .findFirstCompletelyVisibleItemPosition()
+                .findFirstCompletelyVisibleItemPosition()
         }
 
         when (layoutManagerType) {
             LayoutManagerType.GRID_LAYOUT_MANAGER -> {
-                layoutManager = GridLayoutManager(activity,
+                layoutManager = GridLayoutManager(
+                    activity,
                     SPAN_COUNT
                 )
                 currentLayoutManagerType =
@@ -119,7 +123,34 @@ class RecyclerViewFragment : Fragment() {
             "Galaxy Diet",
             "Arbre de Vie"
         )
-        dataset = Array(DATASET_COUNT, { i -> name[i]})
+        val distance = arrayOf(
+            "10",
+            "58",
+            "69",
+            "153",
+            "245",
+            "390",
+            "420",
+            "486",
+            "820",
+            "1506"
+        )
+        val image = arrayOf(
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6",
+            "a7",
+            "a8",
+            "a9",
+            "a10"
+        )
+        dataset = Array(DATASET_COUNT, { i -> name[i] })
+        dataDist = Array(DATASET_COUNT, { i -> distance[i] })
+        dataImage = Array(DATASET_COUNT, { i -> image[i] })
+
     }
 
     companion object {
